@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|e:\\project-zar\\custom\\.net\\grpsexample\\authproject\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|e:\\project-zar\\custom\\.net\\grpsexample\\authproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|e:\\project-zar\\custom\\.net\\grpsexample\\authproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|e:\\project-zar\\custom\\.net\\grpsexample\\authproject\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|e:\\project-zar\\custom\\.net\\grpsexample\\authproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|e:\\project-zar\\custom\\.net\\grpsexample\\authproject\\protos\\auth.proto||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{908A9EBF-C4C4-492B-95A4-68ED603BF40B}|AuthProject.csproj|solutionrelative:protos\\auth.proto||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB4AAAAFAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-05T13:04:16.405Z",
+              "WhenOpened": "2025-01-11T07:41:34.878Z",
               "EditorCaption": ""
             },
             {
@@ -41,10 +53,45 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:02:43.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T07:37:26.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T07:36:15.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "auth.proto",
+              "DocumentMoniker": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Protos\\auth.proto",
+              "RelativeDocumentMoniker": "Protos\\auth.proto",
+              "ToolTip": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Protos\\auth.proto",
+              "RelativeToolTip": "Protos\\auth.proto",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003853|",
+              "WhenOpened": "2025-01-11T07:35:15.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T07:35:10.984Z"
             }
           ]
         }

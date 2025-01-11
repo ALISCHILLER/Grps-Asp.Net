@@ -1,0 +1,39 @@
+syntax = "proto3"; // ÊÚ??ä äÓÎå ÑæÊæÈÇİ ãæÑÏ ÇÓÊİÇÏå (äÓÎå ?)
+
+option csharp_namespace = "AuthProject"; 
+// ÊÚ??ä İÖÇ? äÇã ÈÑÇ? Êæá?Ï ˜ÏåÇ? C# ãÑÊÈØ ÈÇ Ç?ä İÇ?á ÑæÊæÈÇİ
+
+package auth; 
+// ÈÓÊåÇ? ˜å ÊãÇã? ?ÇãåÇ (messages) æ ÓÑæ?ÓåÇ? (services) ãÑÊÈØ ÈÇ Ç?ä İÇ?á ÑÇ ÔÇãá ã?ÔæÏ
+
+// ÊÚÑ?İ ÓÑæ?Ó AuthService ÈÑÇ? ãÏ?Ñ?Ê Úãá?ÇÊ ÇÍÑÇÒ åæ?Ê
+service AuthService {
+  // ÊÚÑ?İ ãÊÏ Login ÈÑÇ? æÑæÏ ˜ÇÑÈÑÇä
+  rpc Login (LoginRequest) returns (LoginResponse);
+
+  // ÊÚÑ?İ ãÊÏ Register ÈÑÇ? ËÈÊäÇã ˜ÇÑÈÑÇä
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+}
+
+// ?Çã ãÑÈæØ Èå ÏÑÎæÇÓÊ æÑæÏ ˜ÇÑÈÑÇä
+message LoginRequest {
+  string username = 1; // äÇã ˜ÇÑÈÑ? ˜å ÈÇ?Ï ÇÑÓÇá ÔæÏ
+  string password = 2; // ÑãÒ ÚÈæÑ ˜ÇÑÈÑ
+}
+
+// ?Çã ãÑÈæØ Èå ÇÓÎ æÑæÏ ˜ÇÑÈÑÇä
+message LoginResponse {
+  string token = 1; // Êæ˜ä? ˜å Èå ˜ÇÑÈÑ ÏÑ ÕæÑÊ ãæİŞ?Ê ÇÑÓÇá ã?ÔæÏ
+}
+
+// ?Çã ãÑÈæØ Èå ÏÑÎæÇÓÊ ËÈÊäÇã ˜ÇÑÈÑÇä
+message RegisterRequest {
+  string username = 1; // äÇã ˜ÇÑÈÑ? ÈÑÇ? ËÈÊäÇã
+  string password = 2; // ÑãÒ ÚÈæÑ ˜ÇÑÈÑ
+  string role = 3;     // äŞÔ ˜ÇÑÈÑ (ãÇääÏ Admin ?Ç User)
+}
+
+// ?Çã ãÑÈæØ Èå ÇÓÎ ËÈÊäÇã ˜ÇÑÈÑÇä
+message RegisterResponse {
+  bool success = 1; // æÖÚ?Ê ãæİŞ?ÊÂã?Ò ÈæÏä Úãá?ÇÊ ËÈÊäÇã
+}

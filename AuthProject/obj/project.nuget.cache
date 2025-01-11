@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "b8GoM6gEqtw=",
+  "dgSpecHash": "rMQ8F8tGyRM=",
   "success": true,
   "projectFilePath": "E:\\project-zar\\custom\\.net\\grpsExample\\AuthProject\\AuthProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zar\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\zar\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\zar\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\zar\\.nuget\\packages\\google.protobuf\\3.27.0\\google.protobuf.3.27.0.nupkg.sha512",
     "C:\\Users\\zar\\.nuget\\packages\\grpc.aspnetcore\\2.67.0\\grpc.aspnetcore.2.67.0.nupkg.sha512",
     "C:\\Users\\zar\\.nuget\\packages\\grpc.aspnetcore.server\\2.67.0\\grpc.aspnetcore.server.2.67.0.nupkg.sha512",

@@ -11,6 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Protobuf Include="Protos\auth.proto" GrpcServices="Server" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
     <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
     <PackageReference Include="Grpc.Net.ClientFactory" Version="2.67.0" />
