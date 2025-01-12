@@ -12,12 +12,16 @@
           "Grpc.AspNetCore": "2.67.0",
           "Grpc.Net.Client": "2.67.0",
           "Grpc.Net.ClientFactory": "2.67.0",
-          "Grpc.Tools": "2.68.1",
+          "Grpc.Tools": "2.69.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.0",
+          "Microsoft.AspNetCore.Grpc.Swagger": "0.9.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
           "NSwag.AspNetCore": "14.2.0",
+          "ServiceModel.Grpc.AspNetCore.Swashbuckle": "1.11.1",
+          "Swashbuckle.AspNetCore": "7.2.0",
+          "Swashbuckle.AspNetCore.Swagger": "7.2.0",
           "Swashbuckle.AspNetCore.SwaggerUI": "7.2.0"
         },
         "runtime": {
@@ -67,6 +71,17 @@
           }
         }
       },
+      "Google.Api.CommonProtos/2.15.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.27.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.CommonProtos.dll": {
+            "assemblyVersion": "2.15.0.0",
+            "fileVersion": "2.15.0.0"
+          }
+        }
+      },
       "Google.Protobuf/3.27.0": {
         "runtime": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -79,7 +94,7 @@
         "dependencies": {
           "Google.Protobuf": "3.27.0",
           "Grpc.AspNetCore.Server.ClientFactory": "2.67.0",
-          "Grpc.Tools": "2.68.1"
+          "Grpc.Tools": "2.69.0"
         }
       },
       "Grpc.AspNetCore.Server/2.67.0": {
@@ -148,7 +163,7 @@
           }
         }
       },
-      "Grpc.Tools/2.68.1": {},
+      "Grpc.Tools/2.69.0": {},
       "Humanizer.Core/2.14.1": {
         "runtime": {
           "lib/net6.0/Humanizer.dll": {
@@ -165,6 +180,31 @@
           "lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.52903"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Grpc.JsonTranscoding/9.0.0": {
+        "dependencies": {
+          "Google.Api.CommonProtos": "2.15.0",
+          "Google.Protobuf": "3.27.0",
+          "Grpc.AspNetCore.Server": "2.67.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Grpc.JsonTranscoding.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52903"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Grpc.Swagger/0.9.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Grpc.JsonTranscoding": "9.0.0",
+          "Swashbuckle.AspNetCore": "7.2.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Grpc.Swagger.dll": {
+            "assemblyVersion": "0.9.0.0",
+            "fileVersion": "0.900.24.52903"
           }
         }
       },
@@ -607,7 +647,7 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.0"
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/6.0.3": {},
+      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
       "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.0"
@@ -766,6 +806,14 @@
           }
         }
       },
+      "Microsoft.OpenApi/1.6.22": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.6.22.0",
+            "fileVersion": "1.6.22.0"
+          }
+        }
+      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -872,7 +920,7 @@
       },
       "NSwag.AspNetCore/14.2.0": {
         "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "6.0.3",
+          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
           "Microsoft.Extensions.FileProviders.Embedded": "9.0.0",
           "NSwag.Annotations": "14.2.0",
           "NSwag.Core": "14.2.0",
@@ -932,6 +980,107 @@
           "lib/net9.0/NSwag.Generation.AspNetCore.dll": {
             "assemblyVersion": "14.2.0.0",
             "fileVersion": "14.2.0.0"
+          }
+        }
+      },
+      "ServiceModel.Grpc/1.11.1": {
+        "dependencies": {
+          "ServiceModel.Grpc.Core": "1.11.1",
+          "ServiceModel.Grpc.Emit": "1.11.1"
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.Filters.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          },
+          "lib/net9.0/ServiceModel.Grpc.Interceptors.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          },
+          "lib/net9.0/ServiceModel.Grpc.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          }
+        }
+      },
+      "ServiceModel.Grpc.AspNetCore/1.11.1": {
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.67.0",
+          "ServiceModel.Grpc": "1.11.1"
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.AspNetCore.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          }
+        }
+      },
+      "ServiceModel.Grpc.AspNetCore.Swashbuckle/1.11.1": {
+        "dependencies": {
+          "ServiceModel.Grpc.AspNetCore": "1.11.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "7.2.0"
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          }
+        }
+      },
+      "ServiceModel.Grpc.Core/1.11.1": {
+        "dependencies": {
+          "Grpc.Core.Api": "2.67.0",
+          "Microsoft.Bcl.AsyncInterfaces": "7.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.Core.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          }
+        }
+      },
+      "ServiceModel.Grpc.Emit/1.11.1": {
+        "dependencies": {
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.Descriptions.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          },
+          "lib/net9.0/ServiceModel.Grpc.Emit.dll": {
+            "assemblyVersion": "1.11.1.0",
+            "fileVersion": "1.11.1.0"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore/7.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
+          "Swashbuckle.AspNetCore.Swagger": "7.2.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "7.2.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "7.2.0"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/7.2.0": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.22"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "7.2.0.0",
+            "fileVersion": "7.2.0.956"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/7.2.0": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "7.2.0"
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "7.2.0.0",
+            "fileVersion": "7.2.0.956"
           }
         }
       },
@@ -1094,6 +1243,7 @@
         }
       },
       "System.Numerics.Vectors/4.5.0": {},
+      "System.Reflection.Emit/4.7.0": {},
       "System.Reflection.Metadata/7.0.0": {
         "dependencies": {
           "System.Collections.Immutable": "7.0.0"
@@ -1223,6 +1373,13 @@
       "path": "bcrypt.net-next/4.0.3",
       "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
+    "Google.Api.CommonProtos/2.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k+43CTEgMbT4C2JjcIJon3GvMNFJ3kLMjPTedOkXUAt0D5cFfrlee+M4oieueAVhbXktR89yoj5O/kVmC/AKJw==",
+      "path": "google.api.commonprotos/2.15.0",
+      "hashPath": "google.api.commonprotos.2.15.0.nupkg.sha512"
+    },
     "Google.Protobuf/3.27.0": {
       "type": "package",
       "serviceable": true,
@@ -1279,12 +1436,12 @@
       "path": "grpc.net.common/2.67.0",
       "hashPath": "grpc.net.common.2.67.0.nupkg.sha512"
     },
-    "Grpc.Tools/2.68.1": {
+    "Grpc.Tools/2.69.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BZ96s7ijKAhJoRpIK+pqCeLaGaSwyc5/CAZFwgCcBuAnkU2naYvH0P6qnYCkl0pWDY/JBOnE2RvX9IvRX1Yc5Q==",
-      "path": "grpc.tools/2.68.1",
-      "hashPath": "grpc.tools.2.68.1.nupkg.sha512"
+      "sha512": "sha512-W5hW4R1h19FCzKb8ToqIJMI5YxnQqGmREEpV8E5XkfCtLPIK5MSHztwQ8gZUfG8qu9fg5MhItjzyPRqQBjnrbA==",
+      "path": "grpc.tools/2.69.0",
+      "hashPath": "grpc.tools.2.69.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -1299,6 +1456,20 @@
       "sha512": "sha512-bs+1Pq3vQdS2lTyxNUd9fEhtMsq3eLUpK36k2t56iDMVrk6OrAoFtvrQrTK0Y0OetTcJrUkGU7hBlf+ORzHLqQ==",
       "path": "microsoft.aspnetcore.authentication.jwtbearer/9.0.0",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Grpc.JsonTranscoding/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E0FCrxyaR2DipwWtFtAZ2KzlxizB+ogfCfEW9qv0WWZyu2uMOFFVzT9ywLb8KP9jfUQ99sun8SlhAGcUd0dLZw==",
+      "path": "microsoft.aspnetcore.grpc.jsontranscoding/9.0.0",
+      "hashPath": "microsoft.aspnetcore.grpc.jsontranscoding.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Grpc.Swagger/0.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dEJQVZisJJG/LSrk+akNk1DZc9D7sKtzn2CurgFWTkAV5a6cTn130+zZ+mhzM3njio2KpmBxZ8YkO0394bnMcQ==",
+      "path": "microsoft.aspnetcore.grpc.swagger/0.9.0",
+      "hashPath": "microsoft.aspnetcore.grpc.swagger.0.9.0.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -1426,12 +1597,12 @@
       "path": "microsoft.entityframeworkcore.tools/9.0.0",
       "hashPath": "microsoft.entityframeworkcore.tools.9.0.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.ApiDescription.Server/6.0.3": {
+    "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/FkS66n3wJaUR+Grkg+dMMIyrfmfkEybNoyOhdBMURxavPx6Q1Kn7NY5Ho41s975gpXA9Pnw7WRJbxwICLFgbw==",
-      "path": "microsoft.extensions.apidescription.server/6.0.3",
-      "hashPath": "microsoft.extensions.apidescription.server.6.0.3.nupkg.sha512"
+      "sha512": "sha512-Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
+      "path": "microsoft.extensions.apidescription.server/6.0.5",
+      "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/9.0.0": {
       "type": "package",
@@ -1580,6 +1751,13 @@
       "path": "microsoft.identitymodel.tokens/8.0.1",
       "hashPath": "microsoft.identitymodel.tokens.8.0.1.nupkg.sha512"
     },
+    "Microsoft.OpenApi/1.6.22": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aBvunmrdu/x+4CaA/UP1Jx4xWGwk4kymhoIRnn2Vp+zi5/KOPQJ9EkSXHRUr01WcGKtYl3Au7XfkPJbU1G2sjQ==",
+      "path": "microsoft.openapi/1.6.22",
+      "hashPath": "microsoft.openapi.1.6.22.nupkg.sha512"
+    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1684,6 +1862,62 @@
       "sha512": "sha512-9VO43wD5IK9O79ZESXD44QtNhoWZi2/5oLHV2JbCd0dR6bJ+9SHqcn+LK3VJFvcRZjFry0JSNd6WBDQL+AH72A==",
       "path": "nswag.generation.aspnetcore/14.2.0",
       "hashPath": "nswag.generation.aspnetcore.14.2.0.nupkg.sha512"
+    },
+    "ServiceModel.Grpc/1.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ffiLvmea7rBNtoHRen2+wuQe8b0jWiAoZD+JehNHiS9Qr9kVVrN0k2hPFFuNaRxgAUwuhMGxl70JVvmrZCm0PQ==",
+      "path": "servicemodel.grpc/1.11.1",
+      "hashPath": "servicemodel.grpc.1.11.1.nupkg.sha512"
+    },
+    "ServiceModel.Grpc.AspNetCore/1.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1WsusLSFg4bka9X4hxX3JsF6P9/ohmmasAihZsBtq11AXo+DoEmAOeMBYgRonTp/zMIMsQoQz5hrC0BeAZsAHA==",
+      "path": "servicemodel.grpc.aspnetcore/1.11.1",
+      "hashPath": "servicemodel.grpc.aspnetcore.1.11.1.nupkg.sha512"
+    },
+    "ServiceModel.Grpc.AspNetCore.Swashbuckle/1.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-85/AIk16b8biqkpOWcOLAJrMEZJg6o18YUGYvepltcMr9ittV46B0Al5YDODghZrWoFfcXnjtvNam1WQHh/iGQ==",
+      "path": "servicemodel.grpc.aspnetcore.swashbuckle/1.11.1",
+      "hashPath": "servicemodel.grpc.aspnetcore.swashbuckle.1.11.1.nupkg.sha512"
+    },
+    "ServiceModel.Grpc.Core/1.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cigZQuXY3Yc5IXsiRrP3P8dJs1UVR3axuc2shXFxW5ftFY+upvYI5cN3btrdevLrrFxdmEi5+f7kly+M7jpNFQ==",
+      "path": "servicemodel.grpc.core/1.11.1",
+      "hashPath": "servicemodel.grpc.core.1.11.1.nupkg.sha512"
+    },
+    "ServiceModel.Grpc.Emit/1.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j4eWAskU6toD5fcFRRKbZnVqbZUpnkKGHvWMTNuK+iPlVXvvVHdHB4uFW5/5GfEHlg35eBP3MPQcpDSiZkccQA==",
+      "path": "servicemodel.grpc.emit/1.11.1",
+      "hashPath": "servicemodel.grpc.emit.1.11.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/7.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vJv19UpWm6OOgnS9QLDnWARNVasXUfj8SFvlG7UVALm4nBnfwRnEky7C0veSDqMUmBeMPC6Ec3d6G1ts/J04Uw==",
+      "path": "swashbuckle.aspnetcore/7.2.0",
+      "hashPath": "swashbuckle.aspnetcore.7.2.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/7.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y27fNDfIh1vGhJjXYynLcZjl7DLOW1bSO2MDsY9wB4Zm1fdxpPsuBSiR4U+0acWlAqLmnuOPKr/OeOgwRUkBlw==",
+      "path": "swashbuckle.aspnetcore.swagger/7.2.0",
+      "hashPath": "swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/7.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pMrTxGVuXM7t4wqft5CNNU8A0++Yw5kTLmYhB6tbEcyBfO8xEF/Y8pkJhO6BZ/2MYONrRYoQTfPFJqu8fOf5WQ==",
+      "path": "swashbuckle.aspnetcore.swaggergen/7.2.0",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore.SwaggerUI/7.2.0": {
       "type": "package",
@@ -1817,6 +2051,13 @@
       "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "path": "system.reflection.emit/4.7.0",
+      "hashPath": "system.reflection.emit.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Metadata/7.0.0": {
       "type": "package",

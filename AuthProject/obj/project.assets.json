@@ -60,6 +60,25 @@
           }
         }
       },
+      "Google.Api.CommonProtos/2.15.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "[3.25.0, 4.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Api.CommonProtos.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.CommonProtos.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Google.Protobuf/3.27.0": {
         "type": "package",
         "compile": {
@@ -189,7 +208,7 @@
           }
         }
       },
-      "Grpc.Tools/2.68.1": {
+      "Grpc.Tools/2.69.0": {
         "type": "package",
         "build": {
           "build/Grpc.Tools.props": {},
@@ -227,6 +246,36 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Microsoft.AspNetCore.Grpc.JsonTranscoding/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Api.CommonProtos": "2.15.0",
+          "Google.Protobuf": "3.27.0",
+          "Grpc.AspNetCore.Server": "2.64.0"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Grpc.JsonTranscoding.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Grpc.JsonTranscoding.dll": {}
+        },
+        "build": {
+          "buildTransitive/Microsoft.AspNetCore.Grpc.JsonTranscoding.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Grpc.Swagger/0.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Grpc.JsonTranscoding": "9.0.0",
+          "Swashbuckle.AspNetCore": "6.6.2"
+        },
+        "compile": {
+          "lib/net9.0/Microsoft.AspNetCore.Grpc.Swagger.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.Grpc.Swagger.dll": {}
+        }
       },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "type": "package",
@@ -750,7 +799,7 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.0"
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/6.0.3": {
+      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
           "build/Microsoft.Extensions.ApiDescription.Server.props": {},
@@ -1137,6 +1186,19 @@
           }
         }
       },
+      "Microsoft.OpenApi/1.6.22": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
         "compile": {
@@ -1379,6 +1441,150 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "ServiceModel.Grpc/1.11.1": {
+        "type": "package",
+        "dependencies": {
+          "ServiceModel.Grpc.Core": "1.11.1",
+          "ServiceModel.Grpc.Emit": "1.11.1"
+        },
+        "compile": {
+          "lib/net9.0/ServiceModel.Grpc.Filters.dll": {
+            "related": ".xml"
+          },
+          "lib/net9.0/ServiceModel.Grpc.Interceptors.dll": {
+            "related": ".xml"
+          },
+          "lib/net9.0/ServiceModel.Grpc.dll": {
+            "related": ".Filters.xml;.Interceptors.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.Filters.dll": {
+            "related": ".xml"
+          },
+          "lib/net9.0/ServiceModel.Grpc.Interceptors.dll": {
+            "related": ".xml"
+          },
+          "lib/net9.0/ServiceModel.Grpc.dll": {
+            "related": ".Filters.xml;.Interceptors.xml;.xml"
+          }
+        }
+      },
+      "ServiceModel.Grpc.AspNetCore/1.11.1": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.AspNetCore.Server": "2.67.0",
+          "ServiceModel.Grpc": "1.11.1"
+        },
+        "compile": {
+          "lib/net9.0/ServiceModel.Grpc.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ServiceModel.Grpc.AspNetCore.Swashbuckle/1.11.1": {
+        "type": "package",
+        "dependencies": {
+          "ServiceModel.Grpc.AspNetCore": "1.11.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "7.0.0"
+        },
+        "compile": {
+          "lib/net9.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ServiceModel.Grpc.Core/1.11.1": {
+        "type": "package",
+        "dependencies": {
+          "Grpc.Core.Api": "2.67.0",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1"
+        },
+        "compile": {
+          "lib/net9.0/ServiceModel.Grpc.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ServiceModel.Grpc.Emit/1.11.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "compile": {
+          "lib/net9.0/ServiceModel.Grpc.Descriptions.dll": {},
+          "lib/net9.0/ServiceModel.Grpc.Emit.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/ServiceModel.Grpc.Descriptions.dll": {},
+          "lib/net9.0/ServiceModel.Grpc.Emit.dll": {}
+        }
+      },
+      "Swashbuckle.AspNetCore/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
+          "Swashbuckle.AspNetCore.Swagger": "7.2.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "7.2.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "7.2.0"
+        },
+        "build": {
+          "build/Swashbuckle.AspNetCore.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Swashbuckle.AspNetCore.props": {}
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.22"
+        },
+        "compile": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/7.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "7.2.0"
+        },
+        "compile": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
       },
       "Swashbuckle.AspNetCore.SwaggerUI/7.2.0": {
         "type": "package",
@@ -1699,6 +1905,15 @@
         }
       },
       "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Reflection.Emit/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -2074,6 +2289,82 @@
         "readme.md"
       ]
     },
+    "Google.Api.CommonProtos/2.15.0": {
+      "sha512": "k+43CTEgMbT4C2JjcIJon3GvMNFJ3kLMjPTedOkXUAt0D5cFfrlee+M4oieueAVhbXktR89yoj5O/kVmC/AKJw==",
+      "type": "package",
+      "path": "google.api.commonprotos/2.15.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "build/Google.Api.CommonProtos.targets",
+        "content/protos/google/api/annotations.proto",
+        "content/protos/google/api/auth.proto",
+        "content/protos/google/api/backend.proto",
+        "content/protos/google/api/billing.proto",
+        "content/protos/google/api/client.proto",
+        "content/protos/google/api/config_change.proto",
+        "content/protos/google/api/consumer.proto",
+        "content/protos/google/api/context.proto",
+        "content/protos/google/api/control.proto",
+        "content/protos/google/api/distribution.proto",
+        "content/protos/google/api/documentation.proto",
+        "content/protos/google/api/endpoint.proto",
+        "content/protos/google/api/error_reason.proto",
+        "content/protos/google/api/field_behavior.proto",
+        "content/protos/google/api/field_info.proto",
+        "content/protos/google/api/http.proto",
+        "content/protos/google/api/httpbody.proto",
+        "content/protos/google/api/label.proto",
+        "content/protos/google/api/launch_stage.proto",
+        "content/protos/google/api/log.proto",
+        "content/protos/google/api/logging.proto",
+        "content/protos/google/api/metric.proto",
+        "content/protos/google/api/monitored_resource.proto",
+        "content/protos/google/api/monitoring.proto",
+        "content/protos/google/api/policy.proto",
+        "content/protos/google/api/quota.proto",
+        "content/protos/google/api/resource.proto",
+        "content/protos/google/api/routing.proto",
+        "content/protos/google/api/service.proto",
+        "content/protos/google/api/source_info.proto",
+        "content/protos/google/api/system_parameter.proto",
+        "content/protos/google/api/usage.proto",
+        "content/protos/google/api/visibility.proto",
+        "content/protos/google/rpc/code.proto",
+        "content/protos/google/rpc/context/attribute_context.proto",
+        "content/protos/google/rpc/context/audit_context.proto",
+        "content/protos/google/rpc/error_details.proto",
+        "content/protos/google/rpc/http.proto",
+        "content/protos/google/rpc/status.proto",
+        "content/protos/google/type/calendar_period.proto",
+        "content/protos/google/type/color.proto",
+        "content/protos/google/type/date.proto",
+        "content/protos/google/type/datetime.proto",
+        "content/protos/google/type/dayofweek.proto",
+        "content/protos/google/type/decimal.proto",
+        "content/protos/google/type/expr.proto",
+        "content/protos/google/type/fraction.proto",
+        "content/protos/google/type/interval.proto",
+        "content/protos/google/type/latlng.proto",
+        "content/protos/google/type/localized_text.proto",
+        "content/protos/google/type/money.proto",
+        "content/protos/google/type/month.proto",
+        "content/protos/google/type/phone_number.proto",
+        "content/protos/google/type/postal_address.proto",
+        "content/protos/google/type/quaternion.proto",
+        "content/protos/google/type/timeofday.proto",
+        "google.api.commonprotos.2.15.0.nupkg.sha512",
+        "google.api.commonprotos.nuspec",
+        "lib/net461/Google.Api.CommonProtos.dll",
+        "lib/net461/Google.Api.CommonProtos.pdb",
+        "lib/net461/Google.Api.CommonProtos.xml",
+        "lib/netstandard2.0/Google.Api.CommonProtos.dll",
+        "lib/netstandard2.0/Google.Api.CommonProtos.pdb",
+        "lib/netstandard2.0/Google.Api.CommonProtos.xml"
+      ]
+    },
     "Google.Protobuf/3.27.0": {
       "sha512": "tEaKpc+SP7I3gYW9AHozESyKkrCg8Xe7huI3Q3iUt5t8Dn29r2k1u8jyrGrD16maj/0UsQBM0MDViWEj0iynOA==",
       "type": "package",
@@ -2271,10 +2562,10 @@
         "packageIcon.png"
       ]
     },
-    "Grpc.Tools/2.68.1": {
-      "sha512": "BZ96s7ijKAhJoRpIK+pqCeLaGaSwyc5/CAZFwgCcBuAnkU2naYvH0P6qnYCkl0pWDY/JBOnE2RvX9IvRX1Yc5Q==",
+    "Grpc.Tools/2.69.0": {
+      "sha512": "W5hW4R1h19FCzKb8ToqIJMI5YxnQqGmREEpV8E5XkfCtLPIK5MSHztwQ8gZUfG8qu9fg5MhItjzyPRqQBjnrbA==",
       "type": "package",
-      "path": "grpc.tools/2.68.1",
+      "path": "grpc.tools/2.69.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -2303,7 +2594,7 @@
         "build/native/include/google/protobuf/timestamp.proto",
         "build/native/include/google/protobuf/type.proto",
         "build/native/include/google/protobuf/wrappers.proto",
-        "grpc.tools.2.68.1.nupkg.sha512",
+        "grpc.tools.2.69.0.nupkg.sha512",
         "grpc.tools.nuspec",
         "packageIcon.png",
         "tools/linux_arm64/grpc_csharp_plugin",
@@ -2352,6 +2643,38 @@
         "lib/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
         "microsoft.aspnetcore.authentication.jwtbearer.9.0.0.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Grpc.JsonTranscoding/9.0.0": {
+      "sha512": "E0FCrxyaR2DipwWtFtAZ2KzlxizB+ogfCfEW9qv0WWZyu2uMOFFVzT9ywLb8KP9jfUQ99sun8SlhAGcUd0dLZw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.grpc.jsontranscoding/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/Microsoft.AspNetCore.Grpc.JsonTranscoding.targets",
+        "buildTransitive/Microsoft.AspNetCore.Grpc.JsonTranscoding.targets",
+        "content/protos/google/api/annotations.proto",
+        "content/protos/google/api/http.proto",
+        "lib/net9.0/Microsoft.AspNetCore.Grpc.JsonTranscoding.dll",
+        "microsoft.aspnetcore.grpc.jsontranscoding.9.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.grpc.jsontranscoding.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Grpc.Swagger/0.9.0": {
+      "sha512": "dEJQVZisJJG/LSrk+akNk1DZc9D7sKtzn2CurgFWTkAV5a6cTn130+zZ+mhzM3njio2KpmBxZ8YkO0394bnMcQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.grpc.swagger/0.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net9.0/Microsoft.AspNetCore.Grpc.Swagger.dll",
+        "microsoft.aspnetcore.grpc.swagger.0.9.0.nupkg.sha512",
+        "microsoft.aspnetcore.grpc.swagger.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -3529,10 +3852,10 @@
         "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
-    "Microsoft.Extensions.ApiDescription.Server/6.0.3": {
-      "sha512": "/FkS66n3wJaUR+Grkg+dMMIyrfmfkEybNoyOhdBMURxavPx6Q1Kn7NY5Ho41s975gpXA9Pnw7WRJbxwICLFgbw==",
+    "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
+      "sha512": "Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
       "type": "package",
-      "path": "microsoft.extensions.apidescription.server/6.0.3",
+      "path": "microsoft.extensions.apidescription.server/6.0.5",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -3542,7 +3865,7 @@
         "build/Microsoft.Extensions.ApiDescription.Server.targets",
         "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props",
         "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets",
-        "microsoft.extensions.apidescription.server.6.0.3.nupkg.sha512",
+        "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
         "microsoft.extensions.apidescription.server.nuspec",
         "tools/Newtonsoft.Json.dll",
         "tools/dotnet-getdocument.deps.json",
@@ -4351,6 +4674,21 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Microsoft.OpenApi/1.6.22": {
+      "sha512": "aBvunmrdu/x+4CaA/UP1Jx4xWGwk4kymhoIRnn2Vp+zi5/KOPQJ9EkSXHRUr01WcGKtYl3Au7XfkPJbU1G2sjQ==",
+      "type": "package",
+      "path": "microsoft.openapi/1.6.22",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.xml",
+        "microsoft.openapi.1.6.22.nupkg.sha512",
+        "microsoft.openapi.nuspec"
+      ]
+    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "sha512": "N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "type": "package",
@@ -4629,6 +4967,200 @@
         "lib/netstandard2.0/NSwag.Generation.AspNetCore.xml",
         "nswag.generation.aspnetcore.14.2.0.nupkg.sha512",
         "nswag.generation.aspnetcore.nuspec"
+      ]
+    },
+    "ServiceModel.Grpc/1.11.1": {
+      "sha512": "ffiLvmea7rBNtoHRen2+wuQe8b0jWiAoZD+JehNHiS9Qr9kVVrN0k2hPFFuNaRxgAUwuhMGxl70JVvmrZCm0PQ==",
+      "type": "package",
+      "path": "servicemodel.grpc/1.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "ThirdPartyNotices.txt",
+        "lib/net462/ServiceModel.Grpc.Filters.dll",
+        "lib/net462/ServiceModel.Grpc.Filters.xml",
+        "lib/net462/ServiceModel.Grpc.Interceptors.dll",
+        "lib/net462/ServiceModel.Grpc.Interceptors.xml",
+        "lib/net462/ServiceModel.Grpc.dll",
+        "lib/net462/ServiceModel.Grpc.xml",
+        "lib/net8.0/ServiceModel.Grpc.Filters.dll",
+        "lib/net8.0/ServiceModel.Grpc.Filters.xml",
+        "lib/net8.0/ServiceModel.Grpc.Interceptors.dll",
+        "lib/net8.0/ServiceModel.Grpc.Interceptors.xml",
+        "lib/net8.0/ServiceModel.Grpc.dll",
+        "lib/net8.0/ServiceModel.Grpc.xml",
+        "lib/net9.0/ServiceModel.Grpc.Filters.dll",
+        "lib/net9.0/ServiceModel.Grpc.Filters.xml",
+        "lib/net9.0/ServiceModel.Grpc.Interceptors.dll",
+        "lib/net9.0/ServiceModel.Grpc.Interceptors.xml",
+        "lib/net9.0/ServiceModel.Grpc.dll",
+        "lib/net9.0/ServiceModel.Grpc.xml",
+        "lib/netstandard2.0/ServiceModel.Grpc.Filters.dll",
+        "lib/netstandard2.0/ServiceModel.Grpc.Filters.xml",
+        "lib/netstandard2.0/ServiceModel.Grpc.Interceptors.dll",
+        "lib/netstandard2.0/ServiceModel.Grpc.Interceptors.xml",
+        "lib/netstandard2.0/ServiceModel.Grpc.dll",
+        "lib/netstandard2.0/ServiceModel.Grpc.xml",
+        "lib/netstandard2.1/ServiceModel.Grpc.Filters.dll",
+        "lib/netstandard2.1/ServiceModel.Grpc.Filters.xml",
+        "lib/netstandard2.1/ServiceModel.Grpc.Interceptors.dll",
+        "lib/netstandard2.1/ServiceModel.Grpc.Interceptors.xml",
+        "lib/netstandard2.1/ServiceModel.Grpc.dll",
+        "lib/netstandard2.1/ServiceModel.Grpc.xml",
+        "servicemodel.grpc.1.11.1.nupkg.sha512",
+        "servicemodel.grpc.nuspec"
+      ]
+    },
+    "ServiceModel.Grpc.AspNetCore/1.11.1": {
+      "sha512": "1WsusLSFg4bka9X4hxX3JsF6P9/ohmmasAihZsBtq11AXo+DoEmAOeMBYgRonTp/zMIMsQoQz5hrC0BeAZsAHA==",
+      "type": "package",
+      "path": "servicemodel.grpc.aspnetcore/1.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "ThirdPartyNotices.txt",
+        "lib/net6.0/ServiceModel.Grpc.AspNetCore.dll",
+        "lib/net6.0/ServiceModel.Grpc.AspNetCore.xml",
+        "lib/net8.0/ServiceModel.Grpc.AspNetCore.dll",
+        "lib/net8.0/ServiceModel.Grpc.AspNetCore.xml",
+        "lib/net9.0/ServiceModel.Grpc.AspNetCore.dll",
+        "lib/net9.0/ServiceModel.Grpc.AspNetCore.xml",
+        "servicemodel.grpc.aspnetcore.1.11.1.nupkg.sha512",
+        "servicemodel.grpc.aspnetcore.nuspec"
+      ]
+    },
+    "ServiceModel.Grpc.AspNetCore.Swashbuckle/1.11.1": {
+      "sha512": "85/AIk16b8biqkpOWcOLAJrMEZJg6o18YUGYvepltcMr9ittV46B0Al5YDODghZrWoFfcXnjtvNam1WQHh/iGQ==",
+      "type": "package",
+      "path": "servicemodel.grpc.aspnetcore.swashbuckle/1.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "ThirdPartyNotices.txt",
+        "lib/net6.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.dll",
+        "lib/net6.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.xml",
+        "lib/net8.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.dll",
+        "lib/net8.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.xml",
+        "lib/net9.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.dll",
+        "lib/net9.0/ServiceModel.Grpc.AspNetCore.Swashbuckle.xml",
+        "servicemodel.grpc.aspnetcore.swashbuckle.1.11.1.nupkg.sha512",
+        "servicemodel.grpc.aspnetcore.swashbuckle.nuspec"
+      ]
+    },
+    "ServiceModel.Grpc.Core/1.11.1": {
+      "sha512": "cigZQuXY3Yc5IXsiRrP3P8dJs1UVR3axuc2shXFxW5ftFY+upvYI5cN3btrdevLrrFxdmEi5+f7kly+M7jpNFQ==",
+      "type": "package",
+      "path": "servicemodel.grpc.core/1.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "ThirdPartyNotices.txt",
+        "lib/net462/ServiceModel.Grpc.Core.dll",
+        "lib/net462/ServiceModel.Grpc.Core.xml",
+        "lib/net8.0/ServiceModel.Grpc.Core.dll",
+        "lib/net8.0/ServiceModel.Grpc.Core.xml",
+        "lib/net9.0/ServiceModel.Grpc.Core.dll",
+        "lib/net9.0/ServiceModel.Grpc.Core.xml",
+        "lib/netstandard2.0/ServiceModel.Grpc.Core.dll",
+        "lib/netstandard2.0/ServiceModel.Grpc.Core.xml",
+        "lib/netstandard2.1/ServiceModel.Grpc.Core.dll",
+        "lib/netstandard2.1/ServiceModel.Grpc.Core.xml",
+        "servicemodel.grpc.core.1.11.1.nupkg.sha512",
+        "servicemodel.grpc.core.nuspec"
+      ]
+    },
+    "ServiceModel.Grpc.Emit/1.11.1": {
+      "sha512": "j4eWAskU6toD5fcFRRKbZnVqbZUpnkKGHvWMTNuK+iPlVXvvVHdHB4uFW5/5GfEHlg35eBP3MPQcpDSiZkccQA==",
+      "type": "package",
+      "path": "servicemodel.grpc.emit/1.11.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "ThirdPartyNotices.txt",
+        "lib/net462/ServiceModel.Grpc.Descriptions.dll",
+        "lib/net462/ServiceModel.Grpc.Emit.dll",
+        "lib/net8.0/ServiceModel.Grpc.Descriptions.dll",
+        "lib/net8.0/ServiceModel.Grpc.Emit.dll",
+        "lib/net9.0/ServiceModel.Grpc.Descriptions.dll",
+        "lib/net9.0/ServiceModel.Grpc.Emit.dll",
+        "lib/netstandard2.0/ServiceModel.Grpc.Descriptions.dll",
+        "lib/netstandard2.0/ServiceModel.Grpc.Emit.dll",
+        "lib/netstandard2.1/ServiceModel.Grpc.Descriptions.dll",
+        "lib/netstandard2.1/ServiceModel.Grpc.Emit.dll",
+        "servicemodel.grpc.emit.1.11.1.nupkg.sha512",
+        "servicemodel.grpc.emit.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore/7.2.0": {
+      "sha512": "vJv19UpWm6OOgnS9QLDnWARNVasXUfj8SFvlG7UVALm4nBnfwRnEky7C0veSDqMUmBeMPC6Ec3d6G1ts/J04Uw==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore/7.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Swashbuckle.AspNetCore.props",
+        "buildMultiTargeting/Swashbuckle.AspNetCore.props",
+        "docs/package-readme.md",
+        "swashbuckle.aspnetcore.7.2.0.nupkg.sha512",
+        "swashbuckle.aspnetcore.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.Swagger/7.2.0": {
+      "sha512": "y27fNDfIh1vGhJjXYynLcZjl7DLOW1bSO2MDsY9wB4Zm1fdxpPsuBSiR4U+0acWlAqLmnuOPKr/OeOgwRUkBlw==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swagger/7.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/net9.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swagger.7.2.0.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/7.2.0": {
+      "sha512": "pMrTxGVuXM7t4wqft5CNNU8A0++Yw5kTLmYhB6tbEcyBfO8xEF/Y8pkJhO6BZ/2MYONrRYoQTfPFJqu8fOf5WQ==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggergen/7.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
+        "package-readme.md",
+        "swashbuckle.aspnetcore.swaggergen.7.2.0.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore.SwaggerUI/7.2.0": {
@@ -5132,6 +5664,60 @@
         "ref/xamarinwatchos10/_._",
         "system.numerics.vectors.4.5.0.nupkg.sha512",
         "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reflection.Emit/4.7.0": {
+      "sha512": "VR4kk8XLKebQ4MZuKuIni/7oh+QGFmZW3qORd1GvBq/8026OpW501SzT/oypwiQl4TvT8ErnReh/NzY9u+C6wQ==",
+      "type": "package",
+      "path": "system.reflection.emit/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Reflection.Emit.dll",
+        "lib/netstandard1.1/System.Reflection.Emit.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.xml",
+        "lib/netstandard2.1/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Reflection.Emit.dll",
+        "ref/netstandard1.1/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/de/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/es/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/fr/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/it/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ja/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ko/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/ru/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hans/System.Reflection.Emit.xml",
+        "ref/netstandard1.1/zh-hant/System.Reflection.Emit.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.xml",
+        "ref/netstandard2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.xml",
+        "system.reflection.emit.4.7.0.nupkg.sha512",
+        "system.reflection.emit.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -5711,12 +6297,16 @@
       "Grpc.AspNetCore >= 2.67.0",
       "Grpc.Net.Client >= 2.67.0",
       "Grpc.Net.ClientFactory >= 2.67.0",
-      "Grpc.Tools >= 2.68.1",
+      "Grpc.Tools >= 2.69.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.0",
+      "Microsoft.AspNetCore.Grpc.Swagger >= 0.9.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
       "NSwag.AspNetCore >= 14.2.0",
+      "ServiceModel.Grpc.AspNetCore.Swashbuckle >= 1.11.1",
+      "Swashbuckle.AspNetCore >= 7.2.0",
+      "Swashbuckle.AspNetCore.Swagger >= 7.2.0",
       "Swashbuckle.AspNetCore.SwaggerUI >= 7.2.0"
     ]
   },
@@ -5794,11 +6384,15 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.68.1, )"
+            "version": "[2.69.0, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[9.0.0, )"
+          },
+          "Microsoft.AspNetCore.Grpc.Swagger": {
+            "target": "Package",
+            "version": "[0.9.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -5817,6 +6411,18 @@
           "NSwag.AspNetCore": {
             "target": "Package",
             "version": "[14.2.0, )"
+          },
+          "ServiceModel.Grpc.AspNetCore.Swashbuckle": {
+            "target": "Package",
+            "version": "[1.11.1, )"
+          },
+          "Swashbuckle.AspNetCore": {
+            "target": "Package",
+            "version": "[7.2.0, )"
+          },
+          "Swashbuckle.AspNetCore.Swagger": {
+            "target": "Package",
+            "version": "[7.2.0, )"
           },
           "Swashbuckle.AspNetCore.SwaggerUI": {
             "target": "Package",

@@ -1,45 +1,40 @@
 {
   "profiles": {
     "http": {
-      // نام پروفایل برای اجرای برنامه بدون SSL (با استفاده از پروتکل HTTP)
-      "commandName": "Project", // مشخص می‌کند که پروژه به صورت Self-Hosted اجرا شود
-      "launchBrowser": true, // وقتی پروژه اجرا می‌شود، مرورگر به صورت خودکار باز شود
-      "launchUrl": "swagger", // آدرسی که هنگام باز شدن مرورگر باید باز شود (Swagger برای مستندات API)
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development" // متغیر محیطی که محیط اجرا را روی Development تنظیم می‌کند
+        "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "dotnetRunMessages": true, // پیام‌های مربوط به اجرای دستور `dotnet run` نمایش داده شوند
-      "applicationUrl": "http://localhost:5181" // آدرس برنامه روی پروتکل HTTP
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5001"
     },
     "https": {
-      // پروفایل مشابه قبلی، اما با پشتیبانی از SSL (پروتکل HTTPS)
-      "commandName": "Project", // پروژه به صورت Self-Hosted اجرا شود
-      "launchBrowser": true, // مرورگر به صورت خودکار باز شود
-      "launchUrl": "swagger", // مستندات Swagger به صورت پیش‌فرض باز شود
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development" // محیط اجرا: Development
+        "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "dotnetRunMessages": true, // پیام‌های اجرای `dotnet run` نمایش داده شود
-      "applicationUrl": "https://localhost:7179;http://localhost:5181"
-      // آدرس‌های قابل دسترسی برنامه: یک آدرس HTTPS و یک آدرس HTTP
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7179;http://localhost:5001"
     },
     "IIS Express": {
-      // پروفایل اجرای برنامه با IIS Express
-      "commandName": "IISExpress", // مشخص می‌کند که از IIS Express برای اجرای برنامه استفاده شود
-      "launchBrowser": true, // مرورگر هنگام اجرای برنامه باز شود
-      "launchUrl": "swagger", // مستندات Swagger نمایش داده شود
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development" // محیط اجرا روی Development تنظیم شود
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   },
-  "$schema": "https://json.schemastore.org/launchsettings.json", // آدرس شِما برای اعتبارسنجی این فایل
   "iisSettings": {
-    "windowsAuthentication": false, // احراز هویت ویندوز غیرفعال است
-    "anonymousAuthentication": true, // احراز هویت ناشناس فعال است
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:13233/", // آدرس برنامه روی IIS Express
-      "sslPort": 44329 // شماره پورت SSL برای IIS Express
+      "applicationUrl": "http://localhost:10275/",
+      "sslPort": 44309
     }
   }
 }

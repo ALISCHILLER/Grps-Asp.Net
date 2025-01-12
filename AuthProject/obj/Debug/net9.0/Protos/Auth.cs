@@ -46,9 +46,6 @@ namespace AuthProject {
 
   }
   #region Messages
-  /// <summary>
-  /// Å?«„ „—»Êÿ »Â œ—ŒÊ«”  Ê—Êœ ò«—»—«‰
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LoginRequest : pb::IMessage<LoginRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -98,9 +95,6 @@ namespace AuthProject {
     /// <summary>Field number for the "username" field.</summary>
     public const int UsernameFieldNumber = 1;
     private string username_ = "";
-    /// <summary>
-    /// ‰«„ ò«—»—? òÂ »«?œ «—”«· ‘Êœ
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
@@ -113,9 +107,6 @@ namespace AuthProject {
     /// <summary>Field number for the "password" field.</summary>
     public const int PasswordFieldNumber = 2;
     private string password_ = "";
-    /// <summary>
-    /// —„“ ⁄»Ê— ò«—»—
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
@@ -290,9 +281,6 @@ namespace AuthProject {
 
   }
 
-  /// <summary>
-  /// Å?«„ „—»Êÿ »Â Å«”Œ Ê—Êœ ò«—»—«‰
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LoginResponse : pb::IMessage<LoginResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -341,9 +329,6 @@ namespace AuthProject {
     /// <summary>Field number for the "token" field.</summary>
     public const int TokenFieldNumber = 1;
     private string token_ = "";
-    /// <summary>
-    ///  Êò‰? òÂ »Â ò«—»— œ— ’Ê—  „Ê›ﬁ?  «—”«· „?ù‘Êœ
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Token {
@@ -494,9 +479,6 @@ namespace AuthProject {
 
   }
 
-  /// <summary>
-  /// Å?«„ „—»Êÿ »Â œ—ŒÊ«”  À» ù‰«„ ò«—»—«‰
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RegisterRequest : pb::IMessage<RegisterRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -547,9 +529,6 @@ namespace AuthProject {
     /// <summary>Field number for the "username" field.</summary>
     public const int UsernameFieldNumber = 1;
     private string username_ = "";
-    /// <summary>
-    /// ‰«„ ò«—»—? »—«? À» ù‰«„
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
@@ -562,9 +541,6 @@ namespace AuthProject {
     /// <summary>Field number for the "password" field.</summary>
     public const int PasswordFieldNumber = 2;
     private string password_ = "";
-    /// <summary>
-    /// —„“ ⁄»Ê— ò«—»—
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
@@ -577,9 +553,6 @@ namespace AuthProject {
     /// <summary>Field number for the "role" field.</summary>
     public const int RoleFieldNumber = 3;
     private string role_ = "";
-    /// <summary>
-    /// ‰ﬁ‘ ò«—»— („«‰‰œ Admin ?« User)
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Role {
@@ -778,9 +751,6 @@ namespace AuthProject {
 
   }
 
-  /// <summary>
-  /// Å?«„ „—»Êÿ »Â Å«”Œ À» ù‰«„ ò«—»—«‰
-  /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RegisterResponse : pb::IMessage<RegisterResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -829,9 +799,6 @@ namespace AuthProject {
     /// <summary>Field number for the "success" field.</summary>
     public const int SuccessFieldNumber = 1;
     private bool success_;
-    /// <summary>
-    /// Ê÷⁄?  „Ê›ﬁ? ù¬„?“ »Êœ‰ ⁄„·?«  À» ù‰«„
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Success {

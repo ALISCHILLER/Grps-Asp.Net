@@ -1,15 +1,16 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer; // اضافه کردن احراز هویت مبتنی بر JWT
-using Microsoft.IdentityModel.Tokens; // مدیریت و اعتبارسنجی توکن‌های JWT
-using System.Text; // برای کار با رمزنگاری و کدگذاری رشته‌ها
-using AuthProject.Data; // دسترسی به دیتابیس پروژه
-using AuthProject.Services; // دسترسی به سرویس‌های پروژه
-using Microsoft.EntityFrameworkCore; // برای ارتباط با پایگاه داده
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using AuthProject.Data;
+using AuthProject.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// افزودن سرویس‌ها به کانتینر
+// افزودن سرویس‌های مربوط به کنترلرها
+builder.Services.AddControllers(); // این خط را اضافه کنید
 
-// اضافه کردن سرویس gRPC برای مدیریت ارتباطات گرافیکی
+// اضافه کردن سرویس gRPC
 builder.Services.AddGrpc();
 
 // پیکربندی دیتابیس با استفاده از Entity Framework Core
@@ -22,38 +23,51 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuer = true, // بررسی معتبر بودن صادرکننده توکن
-            ValidateAudience = true, // بررسی معتبر بودن مصرف‌کننده توکن
-            ValidateLifetime = true, // بررسی انقضای توکن
-            ValidateIssuerSigningKey = true, // بررسی کلید امضای صادرکننده توکن
-            ValidIssuer = builder.Configuration["Jwt:Issuer"], // تعریف صادرکننده معتبر
-            ValidAudience = builder.Configuration["Jwt:Audience"], // تعریف مصرف‌کننده معتبر
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])) // کلید امضای توکن
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
 
 // پیکربندی سیاست‌های مجوزدهی
 builder.Services.AddAuthorization(options =>
 {
-    // سیاستی که فقط به کاربران با نقش "Admin" اجازه دسترسی می‌دهد
     options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
-
-    // سیاستی که فقط به کاربران با نقش "User" اجازه دسترسی می‌دهد
     options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+});
+
+// افزودن سرویس‌های Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "AuthProject API", Version = "v1" });
 });
 
 var app = builder.Build();
 
-// میدلورهای برنامه
-
-// فعال کردن احراز هویت در سطح اپلیکیشن
+// Middlewareها
+app.UseRouting();
 app.UseAuthentication();
-
-// فعال کردن مجوزدهی برای دسترسی‌ها
 app.UseAuthorization();
+
+// فعال‌سازی Swagger فقط در محیط Development
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "AuthProject API V1");
+    });
+}
 
 // نگاشت سرویس gRPC به اپلیکیشن
 app.MapGrpcService<AuthService>();
 
-// شروع به اجرای اپلیکیشن
+// نگاشت کنترلرها
+app.MapControllers(); // این خط را اضافه کنید
+
 app.Run();

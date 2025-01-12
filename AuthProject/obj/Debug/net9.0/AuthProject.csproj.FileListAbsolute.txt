@@ -175,3 +175,17 @@ E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\runtimes\win
 E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 E:\project-zar\custom\.net\grpsExample\AuthProject\obj\Debug\net9.0\AuthProject.sourcelink.json
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\Microsoft.OpenApi.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\Google.Api.CommonProtos.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\Microsoft.AspNetCore.Grpc.JsonTranscoding.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\Microsoft.AspNetCore.Grpc.Swagger.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.Filters.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.Interceptors.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.AspNetCore.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.AspNetCore.Swashbuckle.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.Core.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.Descriptions.dll
+E:\project-zar\custom\.net\grpsExample\AuthProject\bin\Debug\net9.0\ServiceModel.Grpc.Emit.dll

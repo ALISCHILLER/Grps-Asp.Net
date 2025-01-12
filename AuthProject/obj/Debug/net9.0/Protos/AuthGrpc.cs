@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace AuthProject {
-  /// <summary>
-  ///  ⁄—?› ”—Ê?” AuthService »—«? „œ?—?  ⁄„·?«  «Õ—«“ ÂÊ? 
-  /// </summary>
   public static partial class AuthService
   {
     static readonly string __ServiceName = "auth.AuthService";
@@ -83,24 +80,12 @@ namespace AuthProject {
     [grpc::BindServiceMethod(typeof(AuthService), "BindService")]
     public abstract partial class AuthServiceBase
     {
-      /// <summary>
-      ///  ⁄—?› „ œ Login »—«? Ê—Êœ ò«—»—«‰
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::AuthProject.LoginResponse> Login(global::AuthProject.LoginRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      /// <summary>
-      ///  ⁄—?› „ œ Register »—«? À» ù‰«„ ò«—»—«‰
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::AuthProject.RegisterResponse> Register(global::AuthProject.RegisterRequest request, grpc::ServerCallContext context)
       {
